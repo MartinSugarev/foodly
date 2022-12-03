@@ -1,21 +1,16 @@
-import "./App.css";
+import { Routes, Route } from 'react-router-dom'
+import { mainLayout } from './components/MainLayout/mainLayout'
+import {Home} from './components/Home/Home'
 
 function App() {
+
+ const HomePage = mainLayout(Home)
+
   return (
-    <div className="App">
-      <section class="hero">
-        <div class="hero-body">
-          <p class="title">A React Task</p>
-          <p class="subtitle">by Boom.dev</p>
-        </div>
-      </section>
-      <div class="container is-fullhd">
-        <div class="notification">
-          Edit the <code>./src</code> folder to add components.
-        </div>
-      </div>
-    </div>
-  );
+    <Routes>
+       <Route path="/" element={<HomePage/>} />
+    </Routes>
+  )
 }
 
 export default App;

@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.loadingBar-container{
+    position: relative;
+    width: 900px;
+    height: 250px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0px 5px 10px grey;
+}
+
+.img-container-loading{
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.img-container-loading::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -20px;
+    right: -20px;
+    background-color: #E5E5E5;
+}
+
+.img-container-loading :nth-child(2){
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
