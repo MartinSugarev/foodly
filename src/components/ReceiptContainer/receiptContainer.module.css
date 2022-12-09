@@ -1,0 +1,35 @@
+.receipts-container, .receipts{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.receipts-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    height: 480px;
+    width: 100%;
+    
+}
+
+.receipts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    gap: 10px;
+    overflow-x: scroll;
+}
+
+.h2{
+    font-family: 'Montserrat';
+    font-size: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
