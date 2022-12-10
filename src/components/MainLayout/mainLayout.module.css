@@ -44,7 +44,7 @@
   .input-container{
       position: absolute;
       height: 82px;
-      width: 940px;
+      width: 70%;
       left: 50%;
       transform: translateX(-50%);
       top: 366px;
@@ -56,8 +56,7 @@
 
   .main{
     width: 100%;
-    height: 1343px;
-    background-color: #E5E5E5;
+    background-color: #E5E5E5;    
 }
 
 .form{

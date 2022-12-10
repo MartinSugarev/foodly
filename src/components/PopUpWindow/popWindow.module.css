@@ -25,39 +25,41 @@
 
 .pop-window{
     display: grid;
-    grid-template-columns: 300px 400px;
+    width: 60vw;
+    height: 87vh;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 45% 55%;
     position: fixed;
     top: 63px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60vw;
-    height: 87vh;
     background-color: #FFFFFF;
+    padding: 50px 80px 35px;
+    grid-template-areas: 
+     "top-left top-right"
+     "bottom-left bottom-right"
+    ;
 }
 
-.left{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 40px;  
-  gap: 40px;
-}
+
+
 
 .single-img-container{
     position: relative;
-    top: -70px;
-    left: -70px;
     width: 300px;
     height: 300px;
-    border-radius: 20px;
+    top: -90px;
+    left: -120px;
     overflow: hidden;
+    border-radius: 20px;
+    grid-area: top-left;
+
 }
 
 .img{
-   width: 100%;
-   height: 100%;
-object-fit: cover;
+    display: block;
+    height: 100%;
+
 }
 
 .ingredients{
@@ -67,12 +69,11 @@ object-fit: cover;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 10px;
-    height: 50%;
     position: relative;
-    top: -65px;
+    grid-area: bottom-left;
 }
 
-.ingredients > h5{
+ .h5{
     text-transform: uppercase;
     color: black;
     font-weight: 500;
@@ -83,22 +84,28 @@ object-fit: cover;
 .ingredients-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
+    justify-content: flex-start;
+    gap: 5px;
+    width: 80%;
 
 }
 
-.right{
-    padding: 40px;
+.right-top{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    gap: 25px;
+    gap: 10px;
+    grid-area: top-right;
 }
-
-.right > h1 {
+.bottom-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    grid-area: bottom-right;
+}
+.h1 {
     line-height: 1;
     text-transform: uppercase;
     color: black;
@@ -108,7 +115,7 @@ object-fit: cover;
     font-weight: bolder;
 }
 
-.right > button {
+.small-button {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -125,7 +132,7 @@ object-fit: cover;
     font-weight: 600;
 }
 
-.right > h5{
+.h5{
     text-transform: uppercase;
     color: black;
     font-weight: 700;
@@ -133,7 +140,7 @@ object-fit: cover;
     font-size: 18px;
 }
 
-.right-btn-container > button {
+.big-button {
     width: 68px;
     height: 28px;
     border-radius: 30px;
@@ -144,3 +151,40 @@ object-fit: cover;
     font-size: .7rem;
     text-transform: uppercase;
 }
+
+
+
+  @media only screen and (max-width: 1200px) {
+    .pop-window{
+       position: absolute;
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+        height: auto;
+        width: 80vw;
+        height: auto;
+        overflow-y: auto;
+        gap: 20px;
+    }
+
+    .single-img-container{
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        flex: 1;
+        order: 1;
+        
+    }
+    .ingredients{
+        flex: 1;
+        order: 4;
+    }
+    .right-top{
+        flex: 1;
+        order: 3;
+    }
+    .bottom-right{
+        order: 2;
+    }
+  }
