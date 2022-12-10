@@ -8,6 +8,8 @@ export default function PopUpWindow ({img, heading, setIsHidden}){
 
     const componentRef = useRef()
 
+  
+
     
     useEffect(() => {
 
