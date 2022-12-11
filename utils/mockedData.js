@@ -26,7 +26,7 @@
  },
  {name: 'spicy arrabiata penne',
    img: 'Rectangle 187-4.svg'
- },
+ }
  
 ]
 

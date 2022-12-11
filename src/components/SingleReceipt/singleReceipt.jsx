@@ -18,10 +18,9 @@ import  PopUpWindow  from '../PopUpWindow/popUpWindow'
                 top: 0,
                 left: 0,
                 behavior: 'smooth'
-            })
-          document.body.style.overflow = 'hidden'  
+            }) 
         }else {
-        document.body.style.overflow = 'scroll'
+
         }
  
     }, [isHidden])
